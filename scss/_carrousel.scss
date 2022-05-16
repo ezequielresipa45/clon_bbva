@@ -1,0 +1,159 @@
+$fuente: "Source Sans Pro", sans-serif;
+
+.carrousel {
+    width: 100%;
+    height: 680px;
+
+    .carousel-inner {
+        background-color: #072146;
+
+        padding-top: 8rem;
+    }
+
+    .uno {
+        background-image: url(../images/banner-transaccional-uno.webp);
+        width: 100%;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .contenedor-texto {
+            padding: 4rem;
+            margin-top: 4rem;
+            margin-left: 18.9rem;
+            background-color: #ffffff;
+            width: 48rem;
+            h2 {
+                font-size: 45.5px;
+                margin-bottom: 32px;
+                font-weight: 500;
+                font-family: $fuente;
+                line-height: 48px;
+                color: #121212;
+            }
+
+            p {
+                font-size: 15px;
+                margin-bottom: 16px;
+                color: #626262;
+                padding-right: 1.6rem;
+            }
+        }
+
+        .contenedor-btn {
+            display: flex;
+            align-items: center;
+            margin-left: 18.9rem;
+            width: 48rem;
+
+
+           
+            .btn-new {
+                padding: 14px 17px;
+                border: unset;
+                width: 152px;
+                height: 57px;
+                z-index: 10 !important;
+
+                color: #ffffff;
+                z-index: 1;
+                background: rgb(25, 115, 184);
+                position: relative;
+                font-weight: 600;
+                font-size: 15.5px;
+
+                transition: all 250ms;
+                overflow: hidden;
+            }
+
+            .btn-new::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0;
+
+                background-color: rgb(20, 100, 165);
+                z-index: -1;
+
+                transition: all 0.5s;
+            }
+
+            .btn-new:hover {
+                color: #e8e8e8;
+            }
+
+            .btn-new:hover::before {
+                width: 100%;
+
+            }
+
+
+
+
+            .referir{
+                background-color: rgb(0, 68, 129)!important;
+                width: 172px;
+
+            }
+
+            .referir::before{
+        
+
+                background-color:rgb(4, 50, 99);
+              
+            }
+        }
+    }
+
+    .dos {
+        @extend .uno;
+        background-image: url(../images/banner-transaccional-cinco.webp);
+    }
+
+    .tres {
+        @extend .uno;
+        background-image: url(../images/banner-transaccional-cuatro.webp);
+    }
+
+    .cuatro {
+        @extend .uno;
+        background-image: url(../images/banner-transaccional-tres.webp);
+    }
+
+    .cinco {
+        @extend .uno;
+        background-image: url(../images/banner-transaccional-dos.jpg);
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: transparent !important;
+
+    border-radius: 50% !important;
+    border: 1px solid #ffffff !important;
+
+    height: 13px !important;
+    width: 13px !important;
+    margin: 2px 4px !important;
+}
+
+.carousel-indicators {
+    .active {
+        background-color: #ffffff !important;
+        height: 12px !important;
+        width: 12px !important;
+        border: none !important;
+    }
+}
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' fill='#ffffff'><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z'/></svg>");
+
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' fill='#ffffff'><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z'/></svg>");
+
+$carousel-control-width: 20%;
+
+$carousel-control-opacity: 5;
+$carousel-control-icon-width: 3rem;

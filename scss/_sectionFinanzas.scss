@@ -1,0 +1,84 @@
+.finanzas {
+  background-color: #eaf9fa;
+  display: flex;
+  padding: 0 19rem;
+
+  img {
+    width: 165px;
+    height: 121px;
+  }
+
+  .texto-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3.5rem;
+    gap: 14.3rem;
+
+    .texto {
+
+
+      h2 {
+
+        font-size: 22px;
+        color: #121212;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 15px;
+        color: #121212;
+        line-height: 24px;
+        font-weight: 400;
+        margin-top: 8px;
+
+
+
+
+      }
+    }
+
+    .btn-new {
+      padding: 14px 17px;
+      border: unset;
+      width: 152px;
+      height: 57px;
+      z-index: 10 !important;
+
+      color: #ffffff;
+      z-index: 1;
+      background: rgb(25, 115, 184);
+      position: relative;
+      font-weight: 600;
+      font-size: 15.5px;
+
+      transition: all 250ms;
+      overflow: hidden;
+  }
+
+  .btn-new::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+
+      background-color: rgb(20, 100, 165);
+      z-index: -1;
+
+      transition: all 0.5s;
+  }
+
+  .btn-new:hover {
+      color: #e8e8e8;
+  }
+
+  .btn-new:hover::before {
+      width: 100%;
+
+  }
+  }
+}
