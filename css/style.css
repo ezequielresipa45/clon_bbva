@@ -7911,7 +7911,7 @@ html {
   font-family: "Source Sans Pro", sans-serif; }
 
 .contenedor {
-  height: 560rem; }
+  height: auto; }
 
 *, ::after, ::before {
   box-sizing: revert !important; }
@@ -8352,41 +8352,140 @@ html {
 
 .section_video {
   width: 100%;
-  height: 588px;
+  height: 568px;
   background-color: #043263;
   color: #fff;
   display: flex;
+  margin-bottom: 5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2.5rem;
   box-sizing: border-box; }
   .section_video .section_video_uno {
     width: 50%;
     display: flex;
-    flex-direction: column;
-    padding: 0 5rem; }
+    flex-direction: column; }
     .section_video .section_video_uno .playlistvideo__youtube {
+      width: 720px;
       height: 407px; }
-  .section_video .section_video_dos .caja-videos .videos {
-    height: 240px;
-    width: 360px;
-    overflow-y: scroll;
-    background-color: #072146; }
-    .section_video .section_video_dos .caja-videos .videos .video-uno,
-    .section_video .section_video_dos .caja-videos .videos .video-dos,
-    .section_video .section_video_dos .caja-videos .videos .video-tres {
-      display: flex; }
-      .section_video .section_video_dos .caja-videos .videos .video-uno .listvideo__preview,
-      .section_video .section_video_dos .caja-videos .videos .video-dos .listvideo__preview,
-      .section_video .section_video_dos .caja-videos .videos .video-tres .listvideo__preview {
-        position: relative; }
-        .section_video .section_video_dos .caja-videos .videos .video-uno .listvideo__preview .listvideo__duration,
-        .section_video .section_video_dos .caja-videos .videos .video-dos .listvideo__preview .listvideo__duration,
-        .section_video .section_video_dos .caja-videos .videos .video-tres .listvideo__preview .listvideo__duration {
-          font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
-          font-size: 12px;
+    .section_video .section_video_uno h3, .section_video .section_video_uno .h3 {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 16px 0; }
+    .section_video .section_video_uno p {
+      font-size: 15px;
+      line-height: 24px; }
+  .section_video .section_video_dos {
+    width: 35rem;
+    margin-left: 1.5rem; }
+    .section_video .section_video_dos h2, .section_video .section_video_dos .h2 {
+      font-size: 26px;
+      line-height: 32px;
+      font-weight: 600; }
+    .section_video .section_video_dos .caja-videos hr {
+      opacity: 0.4;
+      color: #fff;
+      margin: 0; }
+    .section_video .section_video_dos .caja-videos .reproduccion {
+      margin-top: 2rem;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #072146;
+      /* From uiverse.io by @namecho */ }
+      .section_video .section_video_dos .caja-videos .reproduccion h2, .section_video .section_video_dos .caja-videos .reproduccion .h2 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600; }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch {
+        --button-width: 3.5em;
+        --button-height: 2em;
+        --toggle-diameter: 1.5em;
+        --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+        --toggle-shadow-offset: 10px;
+        --toggle-wider: 3em;
+        --color-grey: #cccccc;
+        --color-green: #4296f4; }
+      .section_video .section_video_dos .caja-videos .reproduccion .slider {
+        display: inline-block;
+        width: var(--button-width);
+        height: var(--button-height);
+        background-color: var(--color-grey);
+        border-radius: calc(var(--button-height) / 2);
+        position: relative;
+        transition: 0.3s all ease-in-out; }
+        .section_video .section_video_dos .caja-videos .reproduccion .slider:hover {
+          cursor: pointer; }
+      .section_video .section_video_dos .caja-videos .reproduccion .slider::after {
+        content: "";
+        display: inline-block;
+        width: var(--toggle-diameter);
+        height: var(--toggle-diameter);
+        background-color: #fff;
+        border-radius: calc(var(--toggle-diameter) / 2);
+        position: absolute;
+        top: var(--button-toggle-offset);
+        transform: translateX(var(--button-toggle-offset));
+        box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+        transition: 0.3s all ease-in-out; }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch input[type="checkbox"]:checked + .slider {
+        background-color: var(--color-green); }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch input[type="checkbox"]:checked + .slider::after {
+        transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+        box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1); }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch input[type="checkbox"] {
+        display: none; }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch input[type="checkbox"]:active + .slider::after {
+        width: var(--toggle-wider); }
+      .section_video .section_video_dos .caja-videos .reproduccion .switch input[type="checkbox"]:checked:active + .slider::after {
+        transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset))); }
+    .section_video .section_video_dos .caja-videos .videos {
+      height: 240px;
+      width: 350px;
+      overflow-y: scroll;
+      background-color: #072146; }
+      .section_video .section_video_dos .caja-videos .videos .video-uno {
+        background-color: #004481; }
+      .section_video .section_video_dos .caja-videos .videos .video-uno,
+      .section_video .section_video_dos .caja-videos .videos .video-dos,
+      .section_video .section_video_dos .caja-videos .videos .video-tres {
+        padding: 0.5rem 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; }
+        .section_video .section_video_dos .caja-videos .videos .video-uno .descripcion:hover,
+        .section_video .section_video_dos .caja-videos .videos .video-dos .descripcion:hover,
+        .section_video .section_video_dos .caja-videos .videos .video-tres .descripcion:hover {
+          cursor: pointer; }
+        .section_video .section_video_dos .caja-videos .videos .video-uno .descripcion h4, .section_video .section_video_dos .caja-videos .videos .video-uno .descripcion .h4,
+        .section_video .section_video_dos .caja-videos .videos .video-dos .descripcion h4,
+        .section_video .section_video_dos .caja-videos .videos .video-dos .descripcion .h4,
+        .section_video .section_video_dos .caja-videos .videos .video-tres .descripcion h4,
+        .section_video .section_video_dos .caja-videos .videos .video-tres .descripcion .h4 {
+          font-size: 13px;
           line-height: 16px;
-          background: #121212;
-          color: #fff;
-          position: absolute;
-          bottom: 8px;
-          right: 4px;
-          padding: 0 8px;
-          border-radius: 4px; }
+          margin-bottom: 1rem; }
+        .section_video .section_video_dos .caja-videos .videos .video-uno .descripcion p,
+        .section_video .section_video_dos .caja-videos .videos .video-dos .descripcion p,
+        .section_video .section_video_dos .caja-videos .videos .video-tres .descripcion p {
+          font-size: 12px;
+          line-height: 16px; }
+        .section_video .section_video_dos .caja-videos .videos .video-uno .listvideo__preview,
+        .section_video .section_video_dos .caja-videos .videos .video-dos .listvideo__preview,
+        .section_video .section_video_dos .caja-videos .videos .video-tres .listvideo__preview {
+          position: relative; }
+          .section_video .section_video_dos .caja-videos .videos .video-uno .listvideo__preview .listvideo__duration,
+          .section_video .section_video_dos .caja-videos .videos .video-dos .listvideo__preview .listvideo__duration,
+          .section_video .section_video_dos .caja-videos .videos .video-tres .listvideo__preview .listvideo__duration {
+            font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            background: #121212;
+            color: #fff;
+            position: absolute;
+            bottom: 8px;
+            right: 4px;
+            padding: 0 8px;
+            border-radius: 4px; }
